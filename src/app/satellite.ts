@@ -17,7 +17,11 @@ constructor(name: string, type: string, launchDate: string, orbitType: string, o
     this.orbitType = orbitType;
     this.operational = operational;
 }
-    
+
+shouldShowWarning() {
+    return (this.type.toLowerCase() === 'space debris');
+}
+
     ngOnInit(): void {
         throw new Error("Method not implemented.");
     }
